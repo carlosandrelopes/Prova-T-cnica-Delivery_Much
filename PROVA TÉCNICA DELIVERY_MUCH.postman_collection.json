@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "194efb4c-9615-44fe-bc13-73c0eb66d2b2",
+		"name": "PROVA TÉCNICA DELIVERY_MUCH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://challengeqa.staging.devmuch.io/10000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"dez mil\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/10000",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/-10000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"dez mil\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/-10000",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"-10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/10001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"dez mil um\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/10001",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/-10001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"menos dez mil e um\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/-10001",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"-10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/en/10000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ten thousand\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/en/10000",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"en",
+						"10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/en/-10000",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ten thousand\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/en/-10000",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"en",
+						"-10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/en/10001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ten thousand\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/en/10001",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"en",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://challengeqa.staging.devmuch.io/en/-10001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar o Status code 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\" Validar texto por extenso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ten thousand\");\r",
+							"});\r",
+							"pm.test(\"Retorno em até 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://challengeqa.staging.devmuch.io/en/-10001",
+					"protocol": "http",
+					"host": [
+						"challengeqa",
+						"staging",
+						"devmuch",
+						"io"
+					],
+					"path": [
+						"en",
+						"-10001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
